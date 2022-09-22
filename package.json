@@ -4,16 +4,27 @@
   "description": "An API REST using express.js",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergioGL312/express_workshop.git"
   },
   "keywords": [
     "api",
     "rest",
     "express",
-    "nodejs"
+    "nodejs",
+    "jwt",
+    "mysql"
   ],
   "author": "Sergio GL",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergioGL312/express_workshop/issues"
+  },
+  "homepage": "https://github.com/SergioGL312/express_workshop#readme",
   "dependencies": {
     "express": "^4.18.1"
   }
