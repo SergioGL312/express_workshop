@@ -64,7 +64,8 @@ pokemon.get('/', async (req, res, next) => {
 
 pokemon.get('/:id([0-9]{1,3})', async (req, res, next) => {
     const id = req.params.id;
-    if (id >= 1 && id <= 722) {
+    const size = await db.query(`SELECT count(*) AS "size" FROM pokemon;`);
+    if (id >= 1 && id <= size[0].size) {
         const pkmn = await db.query(`SELECT * FROM pokemon WHERE pok_id = ${id};`);
         return res.status(200).json({code: 200, message: pkmn});
     }
